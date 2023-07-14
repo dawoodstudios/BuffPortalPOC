@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     StyleGuideComponent,
@@ -19,7 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     ReactiveFormsModule,
     StyleGuideRoutingModule,
     AngularMaterialModule,
-    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatDialogModule
+    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatDialogModule, MatBottomSheetModule, MatButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
