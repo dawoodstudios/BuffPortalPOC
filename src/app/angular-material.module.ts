@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -33,10 +33,15 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const materialModules = [
   CdkTreeModule,
   MatAutocompleteModule,
+  MatDialogModule,
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
@@ -67,11 +72,17 @@ const materialModules = [
   MatRadioModule,
   MatDatepickerModule,
   MatTooltipModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatProgressBarModule,
+  MatSliderModule,
+  MatStepperModule
 ];
 @NgModule({
   imports: [
     CommonModule,
+    NgFor,
+    NgIf,
+    MatFormFieldModule,
     ...materialModules
   ],
   exports: [
