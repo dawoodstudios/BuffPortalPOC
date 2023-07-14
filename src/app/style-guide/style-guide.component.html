@@ -302,8 +302,8 @@
   <br />
   <br />
   <mat-card-content class="card-content">
-    <button mat-raised-button (click)="openDialog('0ms', '0ms')">Open dialog without animation</button>
-    <button mat-raised-button (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button>
+    <button mat-raised-button color="primary" (click)="openDialog('0ms', '0ms')" style="margin-right: 10px;">Open dialog without animation</button>
+    <button mat-raised-button color="primary" (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button>
   </mat-card-content>
 </mat-card>
 
@@ -595,13 +595,13 @@
       <mat-drawer #drawer class="sidebar-example-sidenav" mode="side">
         <p>Auto-resizing sidenav</p>
         <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-        <button (click)="showFiller = !showFiller" mat-raised-button>
+        <button mat-raised-button color="primary" (click)="showFiller = !showFiller" mat-raised-button>
           Toggle extra text
         </button>
       </mat-drawer>
     
       <div class="sidebar-example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
+        <button mat-raised-button color="primary" type="button" mat-button (click)="drawer.toggle()">
           Toggle sidenav
         </button>
       </div>
@@ -643,7 +643,7 @@
   <br />
   <br />
   <mat-card-content class="card-content">
-    <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+    <button mat-raised-button color="primary" (click)="openSnackBar()" aria-label="Show an example snack-bar">
       Pizza party
     </button>
   </mat-card-content>
@@ -701,7 +701,7 @@
             <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
           </mat-form-field>
           <div>
-            <button mat-button matStepperNext>Next</button>
+            <button mat-raised-button color="primary" mat-button matStepperNext>Next</button>
           </div>
         </form>
       </mat-step>
@@ -714,8 +714,8 @@
           </mat-form-field>
           <br /><br />
           <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+            <button mat-raised-button color="primary" mat-button matStepperPrevious style="margin-right: 10px;">Back</button>
+            <button mat-raised-button color="primary" mat-button matStepperNext>Next</button>
           </div>
         </form>
       </mat-step>
@@ -725,8 +725,8 @@
         You are now done.
         <br /><br />
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-raised-button color="primary" mat-button matStepperPrevious style="margin-right: 10px;">Back</button>
+          <button mat-raised-button color="primary" mat-button (click)="stepper.reset()">Reset</button>
         </div>
       </mat-step>
     </mat-vertical-stepper>
@@ -888,7 +888,7 @@
   <br />
   <br />
   <mat-card-content class="card-content">
-    <button mat-raised-button
+    <button mat-raised-button color="primary"
         matTooltip="Info about the action"
         aria-label="Button that displays a tooltip when focused or hovered over">
   Action
