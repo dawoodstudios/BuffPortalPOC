@@ -6,6 +6,8 @@ import { Sort } from '@angular/material/sort';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 export interface Tile {
   color: string;
   cols: number;
@@ -93,11 +95,13 @@ export class StyleGuideComponent {
 
   sortedData: Dessert[];
 
-  constructor(private _snackBar: MatSnackBar, private _formBuilder: FormBuilder, public dialog: MatDialog) {
+  constructor(private _snackBar: MatSnackBar, private _formBuilder: FormBuilder, public dialog: MatDialog, private _bottomSheet: MatBottomSheet) {
     this.sortedData = this.desserts.slice();
     this.dataSources.data = TREE_DATA;
   }
-  
+  openBottomSheet(): void {
+    this._bottomSheet.open(BottomSheetOverviewExampleSheet);
+  }
   firstFormGroup: FormGroup = this._formBuilder.group({firstCtrl: ['']});
   secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
 
@@ -172,7 +176,7 @@ export class StyleGuideComponent {
 
 @Component({
   selector: 'dialog-animations-example-dialog',
-  templateUrl: 'dialog-animations-example-dialog.html',
+  templateUrl: './dialog-animations-example-dialog.html',
   standalone: true,
   imports: [MatDialogModule, MatButtonModule],
 })
@@ -180,6 +184,20 @@ export class DialogAnimationsExampleDialog {
   constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) {}
 }
 
+@Component({
+  selector: 'bottom-sheet-overview-example-sheet',
+  templateUrl: 'bottom-sheet-overview-example-sheet.html',
+  standalone: true,
+  imports: [ MatListModule ],
+})
+export class BottomSheetOverviewExampleSheet {
+  constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>) {}
+
+  openLink(event: MouseEvent): void {
+    this._bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+}
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);

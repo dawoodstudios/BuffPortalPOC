@@ -4,7 +4,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { PortalModule } from '@angular/cdk/portal';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -42,7 +41,6 @@ const materialModules = [
   CdkTreeModule,
   MatAutocompleteModule,
   MatDialogModule,
-  MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
   MatChipsModule,
