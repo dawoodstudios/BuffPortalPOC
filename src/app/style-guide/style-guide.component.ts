@@ -69,7 +69,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 @Component({
   selector: 'snack-bar-annotated-component-example',
-  templateUrl: './snack-bar-annotated-component-example.html',
+  templateUrl: 'snack-bar-annotated-component-example.html',
   styleUrls: ['./style-guide.component.scss'],
 })
 export class SnackBarAnnotatedComponentExample {
